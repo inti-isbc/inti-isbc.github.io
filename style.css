@@ -40,6 +40,14 @@ body
 	padding-top : 50px;
 }
 
+.normal_font
+{
+	font-family: 'Pathway Gothic One';
+	font-size : 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 /*navbar*/
 @media(min-width : 900px){
 	.navbar .container .navbar-collapse .nav li
@@ -141,8 +149,6 @@ a:hover
 }
 
 
-/*mini_button*/
-
 /*separator*/
 .separator
 {
@@ -167,6 +173,13 @@ a:hover
 	color : #5b5b5b;
 	font-family: 'Pathway Gothic One';
 	font-size : 20px;
+}
+
+/*micro details*/
+.thumbnail_image
+{
+	width : 50%;
+	margin:auto;
 }
 
 /*endorsements*/
@@ -204,4 +217,9 @@ a:hover
 	padding-top: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
+}
+
+.facemash_picture
+{
+	-webkit-filter: sepia(80%);
 }
