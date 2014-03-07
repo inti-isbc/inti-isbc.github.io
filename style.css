@@ -34,7 +34,7 @@ body
 /*	background-image: url("http://i3.minus.com/iNvF8gTKMe8fh.jpg");
 	background-position: center;
 	background-attachment: fixed;*/
-	background-color : #f2f2f2;
+	background-color : #f4f4f2;
 	padding-top : 50px;
 }
 
@@ -183,4 +183,14 @@ a:hover
 #footer_text
 {
 	color : #bfbfbf;
+}
+
+.history
+{
+	color :white;
+	text-align: center;
+	font-family: 'Pathway Gothic One';
+	font-size : 30px;
+	padding-top: 70px;
+	padding-bottom: 70px;
 }
