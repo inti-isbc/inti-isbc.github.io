@@ -1,0 +1,217 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<link rel= "stylesheet" type='text/css' href='./style.css'>
+	<script type="text/javascript" src='home.js'></script>
+	<title>INTI International College Penang | ISBC</title>
+</head>
+<body>
+	<script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+      var y = 650;
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: y,
+          videoId: 'M7lc1UVf-VE',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+      	var z = $('#player_parent').width();
+      	$('#player').css('margin-left',(z-y) /2 + 10);
+
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+	<div id='wrapper'>
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="#"></a>
+		        </div>
+		        <div class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav">
+		          </ul>
+		          <ul class="nav navbar-nav navbar-right">
+					<li ><a href=''>WHAT</a></li>
+		          	<li ><a href=''>WHO</a></li>
+		          	<li ><a href=''>WHEN</a></li>
+		          	<li ><a href=''>HOW</a></li>
+		          	<li ><a href="">CONTACT</a></li>
+		            <li ><a href="">PARTNERS</a></li>
+		          </ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		</div><!--navbar-->
+
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-6 flash_card_parent'>
+					<div class='flash_card'>
+						<h2 class='flash_card_title'>WHEN IS IT?</h2>
+
+						<p class = 'flash_card_content'>
+							3 - 5 OCTOBER 2014
+						</p>
+					</div>
+				</div>
+				<div class='col-md-6 flash_card_parent'>
+					<div class='flash_card'>
+						<h2 class='flash_card_title'>WHERE IS IT?</h2>
+
+						<p class = 'flash_card_content'>
+							EASTIN HOTEL, PENANG
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class='row' style='padding-bottom : 30px'>
+				<div class='col-xs-12'>				
+					<p style="text-align : center" id='player_parent'><div id="player"></div></p>
+				</div>
+			</div>
+		</div>
+
+		<div style='background-color : white'>
+			<br />
+			<div class='container'>
+				<div class='row'>
+					<div class='col-md-offset-1 col-md-4'>
+						<p class='opportunity_title'>Catalyzing your ideas, giving you every opportunity</p>
+					</div>
+					<div class='col-md-5' style='padding-left : 20px'>
+						<p id='why'>
+							Everyone of us has an idea. What differentiates an idea from a revolution is action! ISBC is designed to solve this problem. Every year we invite leadng industries and national icons to this conference to interact with young innovators like you! They provide guidance and resources to all the participants attending this conference. This ensures that the participants, YOU, not only make a point, but also make an impact!
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class='separator'></div>
+		</div>
+
+		<div class='container'>
+			<div class='row'>
+				<h3 style="font-family : 'Pathway Gothic One' , sans-serif ; color : #aaaaaa ">HOW?</h3>
+				<div class='col-md-4 flash_card_parent'>
+					<div class='flash_card' style='background-color : #009dff;border-right : solid 14px rgba(0,0,0,0.4)'>
+						<h2 class='flash_card_title' style='color : #001421'>Submit your abstract!</h2>
+						<p class = 'flash_card_content' style='color : #001421'>
+							30 JUNE 2014
+						</p>
+					</div>
+				</div>
+				<div class='col-md-4 flash_card_parent'>
+					<div class='flash_card' style='background-color : #005e99;border-right : solid 14px rgba(0,0,0,0.4)'>
+						<h2 class='flash_card_title' style='color : #001726'>Pitch your paper!</h2>
+						<p class = 'flash_card_content' style='color : #001726'>
+							31 JULY 2014
+						</p>
+					</div>
+				</div>
+				<div class='col-md-4 flash_card_parent'>
+					<div class='flash_card' style='background-color : #001421;border-right : solid 14px rgba(0,0,0,0.4)'>
+						<h2 class='flash_card_title' style='color :#95adbc '>Present your ideas!</h2>
+						<p class = 'flash_card_content' style='color :#95adbc '>
+							3 - 5 OCTOBER 2014
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style='background-color : black'>
+			<div class='container'>
+				<div class='row'>
+					<div class='col-md-offset-1 col-md-4'>
+						<p class='opportunity_title'>History</p>
+					</div>
+					<div class='col-md-5' style='padding-left : 20px'>
+						<p id='why'>
+							ISBC was pioneered by Dr. William Wong in the year 2008. The aim was to cultivate the art of research from a very young age. Till now, ISBC has been running for 7 consecutive years and is one of the largest Gen-Y conference in the nation!
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-4 flash_card_parent'>
+					<div class='flash_card'>
+						<h2 class='flash_card_title'>ORGANIZED BY,</h2>
+						<p class='flash_card_content'>
+							<img src='./img/isbc_logo.jpg'>
+						</p>
+					</div>
+				</div>
+				<div class='col-md-4 flash_card_parent'>
+					<div class='flash_card'>
+						<h2 class='flash_card_title'>SUPPORTED BY,</h2>
+						<p class='flash_card_content'>
+							<img src='./img/iicp_logo.jpg'>
+						</p>
+					</div>
+				</div>
+				<div class='col-md-4 flash_card_parent'>
+					<div class='flash_card'>
+						<h2 class='flash_card_title'>SUPPORTED BY,</h2>
+						<p class='flash_card_content'>
+
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id='footer'>
+			<div class='container'>
+				<div class='row'>
+					<div class = 'col-xs-9'>
+						<h1 id='footer_text'>All rights reserved INTI International College Penang 7th International Student Based Conference 2014</h1>
+					</div>
+					<div class='col-xs-3'>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
