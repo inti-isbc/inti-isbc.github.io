@@ -10,9 +10,11 @@ $(document).ready(function(){
 
 		for(var i = 0 ; i < 3 ;i++)
 			$(k[i]).height(z);
-	}, 1000);
+
+		$('.member_description').css('left', $('#isbc_central').width());
+	}, 500);
 	$('#head_mini_button1').css('left' , (($('#header').width() - $('#head_mini_button2').width() - $('#head_mini_button1').width()) / 2 - 20));
-		$('#head_mini_button2').css('right' , (($('#header').width() - $('#head_mini_button2').width() - $('#head_mini_button1').width()) / 2 - 20));
+	$('#head_mini_button2').css('right' , (($('#header').width() - $('#head_mini_button2').width() - $('#head_mini_button1').width()) / 2 - 20));
 	
 });
 
@@ -37,8 +39,9 @@ var jingru = new Icon("jingru",'jingru_des');
 var alrik = new Icon("alrik",'alrik_des');
 var ricky = new Icon("ricky",'ricky_des');
 var yontze = new Icon("yontze",'yontze_des');
+var ashley = new Icon("ashley",'ashley_des');
 
-var all = [nicholas, woeiming, mingchan, boonchung, fuyong,yankun,eugene_phuah,eugene_lim,peigent,arthur,wueilong,jingru,alrik,ricky,yontze];
+var all = [ashley, nicholas, woeiming, mingchan, boonchung, fuyong,yankun,eugene_phuah,eugene_lim,peigent,arthur,wueilong,jingru,alrik,ricky,yontze];
 
 $(document).ready(function(){
 	$('.facemash_picture').mouseenter(function(){
@@ -47,7 +50,11 @@ $(document).ready(function(){
 		console.log(a);
 		for(var i = 0 ; i < all.length ; i++)
 		{
-			if(a == all[i].img) $('#' + all[i].des).show(600);
+			if(a == all[i].img)
+			{
+				$('#' + all[i].des).show(0);
+				$('#' + all[i].des).animate({left:'0px',top:'0px'},500);
+			} 
 		}
 	});
 
@@ -57,7 +64,11 @@ $(document).ready(function(){
 		console.log(a);
 		for(var i = 0 ; i < all.length ; i++)
 		{
-			if(a == all[i].img) $('#' + all[i].des).hide(600);
+			if(a == all[i].img)
+			{
+				$('#' + all[i].des).show(0);
+				$('#' + all[i].des).animate({left:$('#isbc_central').width()},500);
+			} 
 		}		
 	});
 });
