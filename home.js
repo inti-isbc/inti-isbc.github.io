@@ -1,17 +1,19 @@
 $(document).ready(function(){
-	var k = document.getElementsByClassName('how_flash_card');
-	var z = 0;
-	for(var i = 0 ; i < 3 ; i++)
-	{
-		var j = $(k[i]).height();
-		if(j > z) z = j;
-	}
+	setTimeout(function(){
+		var k = document.getElementsByClassName('how_flash_card');
+		var z = 0;
+		for(var i = 0 ; i < 3 ; i++)
+		{
+			var j = $(k[i]).height();
+			if(j > z) z = j;
+		}
 
-	for(var i = 0 ; i < 3 ;i++)
-		$(k[i]).height(z);
-
+		for(var i = 0 ; i < 3 ;i++)
+			$(k[i]).height(z);
+	}, 1000);
 	$('#head_mini_button1').css('left' , (($('#header').width() - $('#head_mini_button2').width() - $('#head_mini_button1').width()) / 2 - 20));
-	$('#head_mini_button2').css('right' , (($('#header').width() - $('#head_mini_button2').width() - $('#head_mini_button1').width()) / 2 - 20));
+		$('#head_mini_button2').css('right' , (($('#header').width() - $('#head_mini_button2').width() - $('#head_mini_button1').width()) / 2 - 20));
+	
 });
 
 function Icon (img_id,description_id)
