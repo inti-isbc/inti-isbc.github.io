@@ -11,7 +11,6 @@ $(document).ready(function(){
 		for(var i = 0 ; i < 3 ;i++)
 			$(k[i]).height(z);
 
-		$('.member_description').css('left', $('#isbc_central').width());
 	}, 500);
 	$('#head_mini_button1').css('left' , (($('#header').width() - $('#head_mini_button2').width() - $('#head_mini_button1').width()) / 2 - 20));
 	$('#head_mini_button2').css('right' , (($('#header').width() - $('#head_mini_button2').width() - $('#head_mini_button1').width()) / 2 - 20));
@@ -44,7 +43,7 @@ var ashley = new Icon("ashley",'ashley_des');
 var all = [ashley, nicholas, woeiming, mingchan, boonchung, fuyong,yankun,eugene_phuah,eugene_lim,peigent,arthur,wueilong,jingru,alrik,ricky,yontze];
 
 $(document).ready(function(){
-	$('.facemash_picture').mouseenter(function(){
+	$('.facemash_parent').mouseenter(function(){
 		$(this).css('-webkit-filter','grayscale(0%)');
 		var a = $(this).attr('id');
 		console.log(a);
@@ -52,13 +51,15 @@ $(document).ready(function(){
 		{
 			if(a == all[i].img)
 			{
-				$('#' + all[i].des).show(0);
-				$('#' + all[i].des).animate({left:'0px',top:'0px'},500);
+				//move irrelevant pictures back to their original position
+				$('#' + all[i].des).slideDown(100, function(){
+
+				});
 			} 
 		}
 	});
 
-	$('.facemash_picture').mouseleave(function(){
+	$('.facemash_parent').mouseleave(function(){
 		$(this).css('-webkit-filter','grayscale(100%) contrast(150%) sepia(80%)');
 		var a = $(this).attr('id');
 		console.log(a);
@@ -66,8 +67,9 @@ $(document).ready(function(){
 		{
 			if(a == all[i].img)
 			{
-				$('#' + all[i].des).show(0);
-				$('#' + all[i].des).animate({left:$('#isbc_central').width()},500);
+				$('#' + all[i].des).slideUp(100,function(){
+
+				});
 			} 
 		}		
 	});
