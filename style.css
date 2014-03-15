@@ -77,7 +77,7 @@ body
 
 	.navbar-default
 	{
-		background : rgba(255,255,255,0.40);
+		background : rgba(255,255,255,0.80);
 		box-shadow : none;
 		border : none;
 	}
@@ -284,7 +284,7 @@ a:hover
 .member_name
 {
 	color : white;
-	font-size : 60px;
+	font-size : 40px;
 	border-bottom : 1px solid white;
 }
 
@@ -293,14 +293,14 @@ a:hover
 	color : white;
 	opacity : 0.8;
 	font-family: "Open Sans",sans-serif;
-	font-size : 15px;
+	font-size : 12px;
 	text-align: center;
 }
 
 .member_story
 {
 	color : white;
-	font-size : 16px;
+	font-size : 10px;
 	text-align: left;
 	font-family: "Pathway Gothic One",sans-serif;
 }

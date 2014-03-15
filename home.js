@@ -23,6 +23,19 @@ function Icon (img_id,description_id)
 	this.des = description_id;
 }
 
+var yuen = new Icon("yuen",'yuen_des');
+var clara = new Icon("clara",'clara_des');
+var suaane = new Icon("suaane","suaane_des");
+var alyssa = new Icon("alyssa",'alyssa_des');
+var alwin = new Icon("alwin",'alwin_des');
+var terry = new Icon('terry','terry_des');
+var nigell = new Icon("nigell","nigell_des");
+var kabilen = new Icon("kabilen",'kabilen_des');
+
+var intima = new Icon("intima",'intima_des');
+var isst = new Icon("isst",'isst_des');
+var leeren = new Icon("leeren",'leeren_des');
+var syuenern = new Icon("syuenern",'syuenern_des');
 var nicholas = new Icon("nicholas","nicholas_des");
 var woeiming = new Icon("woeiming",'woeiming_des');
 var fuyong = new Icon ("fuyong","fuyong_des");
@@ -40,19 +53,24 @@ var ricky = new Icon("ricky",'ricky_des');
 var yontze = new Icon("yontze",'yontze_des');
 var ashley = new Icon("ashley",'ashley_des');
 
-var all = [ashley, nicholas, woeiming, mingchan, boonchung, fuyong,yankun,eugene_phuah,eugene_lim,peigent,arthur,wueilong,jingru,alrik,ricky,yontze];
+var all = [yuen, clara, suaane, alyssa, alwin, terry, nigell , kabilen, intima, isst, leeren, syuenern , ashley, nicholas, woeiming, mingchan, boonchung, fuyong,yankun,eugene_phuah,eugene_lim,peigent,arthur,wueilong,jingru,alrik,ricky,yontze];
 
 $(document).ready(function(){
 	$('.facemash_parent').mouseenter(function(){
-		$(this).css('-webkit-filter','grayscale(0%)');
+
 		var a = $(this).attr('id');
+		var k = this.children;
+		for(var i = 0 ; i < k.length ; k++)
+			if($(k[i]).attr('class') == 'facemash_picture')
+				$(k[i]).css('-webkit-filter','grayscale(0%)');
+
 		console.log(a);
 		for(var i = 0 ; i < all.length ; i++)
 		{
 			if(a == all[i].img)
 			{
 				//move irrelevant pictures back to their original position
-				$('#' + all[i].des).slideDown(100, function(){
+				$('#' + all[i].des).slideDown(200, function(){
 
 				});
 			} 
@@ -60,8 +78,13 @@ $(document).ready(function(){
 	});
 
 	$('.facemash_parent').mouseleave(function(){
-		$(this).css('-webkit-filter','grayscale(100%) contrast(150%) sepia(80%)');
+
 		var a = $(this).attr('id');
+		var k = this.children;
+		for(var i = 0 ; i < k.length ; k++)
+			if($(k[i]).attr('class') == 'facemash_picture')
+				$(k[i]).css('-webkit-filter','grayscale(100%) contrast(150%) sepia(80%)');
+
 		console.log(a);
 		for(var i = 0 ; i < all.length ; i++)
 		{
