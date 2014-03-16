@@ -17,6 +17,8 @@ $(document).ready(function(){
 	
 });
 
+
+
 function Icon (img_id,description_id)
 {
 	this.img = img_id;
@@ -63,6 +65,10 @@ $(document).ready(function(){
 		for(var i = 0 ; i < k.length ; k++)
 			if($(k[i]).attr('class') == 'facemash_picture')
 				$(k[i]).css('-webkit-filter','grayscale(0%)');
+				$(k[i]).css('-moz-filter','grayscale(0%)');
+				$(k[i]).css('-o-filter','grayscale(0%)');
+				$(k[i]).css('filter','grayscale(0%)');
+
 
 		console.log(a);
 		for(var i = 0 ; i < all.length ; i++)
@@ -84,6 +90,9 @@ $(document).ready(function(){
 		for(var i = 0 ; i < k.length ; k++)
 			if($(k[i]).attr('class') == 'facemash_picture')
 				$(k[i]).css('-webkit-filter','grayscale(100%) contrast(150%) sepia(80%)');
+				$(k[i]).css('-moz-filter','grayscale(100%) contrast(150%) sepia(80%)');
+				$(k[i]).css('-o-filter','grayscale(100%) contrast(150%) sepia(80%)');
+				$(k[i]).css('filter','grayscale(100%) contrast(150%) sepia(80%)');
 
 		console.log(a);
 		for(var i = 0 ; i < all.length ; i++)

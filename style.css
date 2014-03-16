@@ -17,6 +17,11 @@ h1,h2,h3,h4,h5,h6
 
 }
 
+a:hover
+{
+	cursor: pointer;
+}
+
 p
 {
 	font-family: 'Wire One', sans-serif;
@@ -162,7 +167,6 @@ a:hover
 .flash_card:hover
 {
 	box-shadow : 10px 10px 5px #828282;
-	cursor : pointer;
 }
 
 .flash_card_title
@@ -267,6 +271,9 @@ a:hover
 .facemash_picture
 {
 	-webkit-filter: grayscale(100%) contrast(150%) sepia(80%);
+	-moz-filter:  grayscale(100%) contrast(150%) sepia(80%);
+	-o-filter:grayscale(100%) contrast(150%) sepia(80%);
+	filter :  grayscale(100%) contrast(150%) sepia(80%);
 }
 
 .member_description
